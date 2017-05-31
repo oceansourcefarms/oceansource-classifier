@@ -6,6 +6,8 @@ import { NavigationProvider, StackNavigation } from '@expo/ex-navigation';
 import Router from './navigation/Router';
 import cacheAssetsAsync from './utilities/cacheAssetsAsync';
 
+process.nextTick = setImmediate
+
 class AppContainer extends React.Component {
   state = {
     appIsReady: false,
